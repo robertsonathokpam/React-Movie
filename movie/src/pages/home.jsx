@@ -11,7 +11,7 @@ function Home() {
     const [loading, setLoading]=useState(false);
     const [error, setError]=useState(null); 
 
-   /* const movie=[ {id:1, title:"The Batman",release_Date:"2022-03-04"},
+   /* const movie=[ {id:1, tzitle:"The Batman",release_Date:"2022-03-04"},
         {id:2, title:"The Flash",release_Date:"2023-06-16"},
         {id:3, title:"The Avengers",release_Date:"2012-05-04"},
         {id:4, title:"The Dark Knight",release_Date:"2008-07-18"}

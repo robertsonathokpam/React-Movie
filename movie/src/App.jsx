@@ -1,23 +1,24 @@
-
 import './css/App.css'
 //import MovieCard from './components/MovieCard';
 import Home from './pages/home';
 import Favorites from './pages/favorites';
 import {Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
+import { MovieProvider } from './contexts/MovieContext';
 
 function App() {
 
   return (
-    <div>
-    <NavBar />    
-    <main className="main-content">
-      <Routes >
-        <Route path="/" element={<Home />} />
-        <Route path="/favorites" element={<Favorites />} />
-      </Routes>
-    </main>
-    </div>
+    <MovieProvider>
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </MovieProvider>
+  );
 
 
     /*
@@ -26,7 +27,7 @@ function App() {
     <Text display="Hello, World!" />
     <Text display="Hello, World2!" />
     */
-  );
+
 }
 
 {/* function Text({display}){
